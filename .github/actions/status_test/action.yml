@@ -1,0 +1,21 @@
+name: Notify Deploy End
+description: Notify success, failure, or cancellation to Google Chat with duration
+
+runs:
+  using: "composite"
+  steps:
+    - name: Success
+      if: success()
+      shell: bash
+      run: |
+        echo "成功"
+    - name: Failure
+      if: failure()
+      shell: bash
+      run: |
+        echo "失敗"
+    - name: Cancel
+      if: cancelled()
+      shell: bash
+      run: |
+          echo "キャンセル"
