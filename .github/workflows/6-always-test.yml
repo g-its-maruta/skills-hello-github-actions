@@ -1,4 +1,4 @@
-name: Step 0, Welcome
+name: Step 6, Always test
 
 # This step triggers after the learner creates a new repository from the template.
 # This workflow updates from step 0 to step 1.
@@ -20,6 +20,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: wait
         run: sleep 30s
 
