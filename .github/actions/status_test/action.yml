@@ -18,3 +18,4 @@ runs:
           echo "予期しないステータス: $STATUS"
         exit 1
         fi
+        echo "message=${MESSAGE}"
